@@ -1,10 +1,11 @@
 import './index.css'
+import Nav from './sections/Nav'
 
 function App() {
     return (
-        <h1 className="text-3xl font-bold underline cursor-pointer">
-            Hello world!
-        </h1>
+        <main className="">
+            <Nav />
+        </main>
     )
 }
 
