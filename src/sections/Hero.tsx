@@ -36,14 +36,14 @@ export default function Hero() {
     }, [])
 
     return (
-        <section className="flex relative padding-x py-5 text-base">
-            <div className="relative z-10">
+        <section className="flex relative padding-x py-5 text-base max-lg:flex-col">
+            <div className="relative z-10 max-lg:text-center">
                 <div className="pt-12 text-lg text-[#7f8fa6] font-semibold">Our summer collection</div>
-                <header className="text-8xl font-bold py-5 leading-[1.05] tracking-normal word-spacing-2 capitalize">
+                <header className="text-8xl font-bold py-5 leading-[1.05] tracking-normal word-spacing-2 capitalize max-lg:w-[98%] max-lg:text-[5.8rem]">
                     <p>The new arrival</p>
                     <p><span className='text-coral-red'>Nike</span> shoes</p>
                 </header>
-                <div className="w-2/3 text-lg py-4 word-spacing-1 tracking-wide">
+                <div className="w-3/4 text-lg py-4 word-spacing-1 tracking-wide leading-relaxed max-lg:m-auto">
                     Discover stylish nike arrivals, quality comfort, and innovation for your active life
                 </div>
                 <div className="py-4">
@@ -52,7 +52,7 @@ export default function Hero() {
                         <img className='inline w-6 ml-3' src={chevron_right} alt=" right arrow" />
                     </button>
                 </div>
-                <div className="flex justify-between w-8/12 pt-2">
+                <div className="flex justify-between w-8/12 pt-2 max-lg:w-[95%]">
                     {statShow.map((item) => {
                         return (
                             <div className="">
@@ -63,10 +63,8 @@ export default function Hero() {
                     })}
                 </div>
             </div>
-            <div className="relative bg-gray-200">
-                <div className="Abs_background">
-
-                </div>
+            <div className="relative max-lg:mt-14">
+                <div className="Abs_background"></div>
                 <div className="flex justify-center items-center relative z-10 h-[510px]">
                     <img className='w-3/4' src={img4Hero} alt="" />
                 </div>

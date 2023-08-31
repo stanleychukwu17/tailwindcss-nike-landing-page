@@ -57,6 +57,7 @@ header {
     }
 
 
+
     .Abs_background {
         position: absolute;
         z-index: 0;
@@ -71,6 +72,15 @@ header {
         border: 1px solid greenyellow !important;
         cursor: default !important;
         transition: all .5s ease-out;
+    }
+
+
+    /* for screens below lg from tailwindCss */
+    @media screen and (max-width: 1024px) {
+        .Abs_background {
+            top:0;
+            height: 740px;
+        }
     }
 }
 
