@@ -21,7 +21,7 @@
 body {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    overflow-x: hidden;
     background-color: #fffefe;
     color: #42246d;
     font-family: Montserrat;
@@ -55,6 +55,17 @@ header {
     .input {
         @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
     }
+
+
+    .Abs_background {
+        position: absolute;
+        z-index: 0;
+        left: -10%;
+        top: -17%;
+        width: 120%;
+        height: 100vh;
+        background-color: #ede7e1;
+    }
 }
 
 @layer utilities {
@@ -68,22 +79,6 @@ header {
 
     .padding-y {
         @apply sm:py-5 py-5;
-    }
-
-    .padding-l {
-        @apply sm:pl-16 pl-8;
-    }
-
-    .padding-r {
-        @apply sm:pr-16 pr-8;
-    }
-
-    .padding-t {
-        @apply sm:pt-24 pt-12;
-    }
-
-    .padding-b {
-        @apply sm:pb-24 pb-12;
     }
 
     .info-text {
