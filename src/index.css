@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800&family=Titillium+Web:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800&family=Titillium+Web:wght@300;400;600;700;800;900&display=swap');
 
 @media (prefers-color-scheme: light) {
     :root {
@@ -26,6 +26,12 @@ body {
     color: #42246d;
     font-family: Montserrat;
 }
+main {
+    font-family: 'Titillium Web', sans-serif;
+}
+header {
+    font-family: 'Source Sans 3', sans-serif;
+}
 
 * {
     margin: 0;
@@ -38,6 +44,12 @@ body {
     .max-container {
         max-width: 1440px;
         margin: 0 auto;
+    }
+    .word-spacing-1 {
+        word-spacing: 2.5px;
+    }
+    .word-spacing-2 {
+        word-spacing: 5px;
     }
 
     .input {

@@ -4,12 +4,12 @@ export default function Hero() {
     return (
         <section className="relative padding-x py-5 text-base">
             <div className="">
-                <div className="pt-12">Our summer collection</div>
-                <header className="text-8xl font-source3sans font-medium py-5 leading-[1.25]">
+                <div className="pt-12 text-lg text-coral-red font-medium">Our summer collection</div>
+                <header className="text-8xl font-bold py-5 leading-[1.05] tracking-normal word-spacing-2">
                     <p>The new arrival</p>
                     <p><span className='text-coral-red'>Nike</span> shoes</p>
                 </header>
-                <div className="w-1/4 text-sm py-4">
+                <div className="w-1/3 text-lg py-4 word-spacing-1 tracking-wide">
                     Discover stylish nike arrivals, quality comfort, and innovation for your active life
                 </div>
                 <div className="py-4">
