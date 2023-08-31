@@ -1,4 +1,5 @@
 import chevron_right from '../assets/icons/chevron-right.svg'
+import {bigShoe1} from '../assets/images/index.ts'
 
 const statShow: {stat:string, info:string}[] = [
     { stat: '1k+', info:'Brands'},
@@ -10,7 +11,7 @@ export default function Hero() {
     return (
         <section className="relative padding-x py-5 text-base">
             <div className="">
-                <div className="pt-12 text-lg text-coral-red font-semibold">Our summer collection</div>
+                <div className="pt-12 text-lg text-[#e84118] font-semibold">Our summer collection</div>
                 <header className="text-8xl font-bold py-5 leading-[1.05] tracking-normal word-spacing-2 capitalize">
                     <p>The new arrival</p>
                     <p><span className='text-coral-red'>Nike</span> shoes</p>
@@ -35,7 +36,9 @@ export default function Hero() {
                     })}
                 </div>
             </div>
-            <div className=""></div>
+            <div className="bg-gray-600">
+                <img src={bigShoe1} alt="" />
+            </div>
         </section>
     )
 }
