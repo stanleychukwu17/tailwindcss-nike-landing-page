@@ -3,7 +3,7 @@ import hamburger from '../assets/icons/hamburger.svg'
 
 export default function Nav() {
     return (
-        <header className="relative padding-x py-4 flex justify-between items-center z-10">
+        <header className="relative padding-x py-4 pr-10 flex justify-between items-center z-10">
             <nav className='max-md:w-28'>
                 <a href=""><img src={header_logo} alt="" /></a>
             </nav>

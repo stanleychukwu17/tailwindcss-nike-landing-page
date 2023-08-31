@@ -19,12 +19,20 @@ const thumbnailImages : {'id':number, 'src':string}[] = [
 export default function Hero() {
     const [img4Hero, setImg4Hero] = useState<string>('')
 
-    const updateHeroImg = useCallback((newImg:string) => {
+    const updateHeroImg = useCallback((newImg:string, id:number) => {
+        const activeElement = document.querySelector(`div[data-sid="thumb${id}"]`)
+        const allElements = document.querySelector('.thumbActive') as HTMLElement
+        // .()
+
+        // remove the active 
+        allElements?.classList.remove('thumbActive')
+        activeElement?.classList.add('thumbActive')
+
         setImg4Hero(newImg)
     }, [])
 
     useEffect(() => {
-        updateHeroImg(thumbnailImages[0].src)
+        updateHeroImg(thumbnailImages[0].src, thumbnailImages[0].id)
     }, [])
 
     return (
@@ -64,10 +72,14 @@ export default function Hero() {
                 </div>
                 <div className="relative z-10 flex justify-center space-x-4">
                     {thumbnailImages.map((item) => {
+                        const sid = `thumb${item.id}`
+
                         return (
                             <div 
-                                className="w-36 h-36 bg-[#efeff0] border-2 rounded-lg p-1 hover:border-[#a3a0a9]" key={item.id}
-                                onClick={() => { updateHeroImg(item.src) }}
+                                data-sid={sid}
+                                className="thumb w-36 h-36 bg-[#efeff0] border-2 rounded-lg p-1 hover:border-[#a3a0a9] cursor-pointer"
+                                key={item.id}
+                                onClick={() => { updateHeroImg(item.src, item.id) }}
                             >
                                 <img className='w-full h-full object-contain' src={item.src} alt="" />
                             </div>

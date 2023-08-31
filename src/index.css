@@ -66,6 +66,12 @@ header {
         height: 820px;
         background-color: #eff5f7;
     }
+    .thumbActive {
+        outline: 1px solid greenyellow;
+        border: 1px solid greenyellow !important;
+        cursor: default !important;
+        transition: all .5s ease-out;
+    }
 }
 
 @layer utilities {
