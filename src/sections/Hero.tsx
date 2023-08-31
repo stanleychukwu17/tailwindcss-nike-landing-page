@@ -1,13 +1,32 @@
+import { useCallback, useEffect, useState } from 'react'
 import chevron_right from '../assets/icons/chevron-right.svg'
-import {bigShoe1} from '../assets/images/index.ts'
+import {bigShoe1, bigShoe2, bigShoe3} from '../assets/images/index.ts'
 
+// carries the information for stats of the product
 const statShow: {stat:string, info:string}[] = [
     { stat: '1k+', info:'Brands'},
     { stat: '500+', info:'Shops'},
     { stat: '250k+', info:'Customers'}
 ]
 
+// the thumbnail images for the hero section
+const thumbnailImages : {'id':number, 'src':string}[] = [
+    {'id':1, 'src':bigShoe1},
+    {'id':2, 'src':bigShoe2},
+    {'id':3, 'src':bigShoe3}
+]
+
 export default function Hero() {
+    const [img4Hero, setImg4Hero] = useState<string>('')
+
+    const updateHeroImg = useCallback((newImg:string) => {
+        setImg4Hero(newImg)
+    }, [])
+
+    useEffect(() => {
+        updateHeroImg(thumbnailImages[0].src)
+    }, [])
+
     return (
         <section className="flex relative padding-x py-5 text-base">
             <div className="relative z-10">
@@ -41,10 +60,19 @@ export default function Hero() {
 
                 </div>
                 <div className="flex justify-center items-center relative z-10 h-[510px]">
-                    <img className='w-4/5' src={bigShoe1} alt="" />
+                    <img className='w-3/4' src={img4Hero} alt="" />
                 </div>
-                <div className="">
-
+                <div className="relative z-10 flex justify-center space-x-4">
+                    {thumbnailImages.map((item) => {
+                        return (
+                            <div 
+                                className="w-36 h-36 bg-[#efeff0] border-2 rounded-lg p-1 hover:border-[#a3a0a9]" key={item.id}
+                                onClick={() => { updateHeroImg(item.src) }}
+                            >
+                                <img className='w-full h-full object-contain' src={item.src} alt="" />
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </section>
