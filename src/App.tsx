@@ -1,6 +1,7 @@
 import './index.css'
 import Hero from './sections/Hero'
 import Nav from './sections/Nav'
+import PopularProducts from './sections/PopularProducts'
 
 function App() {
     return (
@@ -8,6 +9,7 @@ function App() {
             <Nav />
             <section>
                 <Hero />
+                <PopularProducts />
             </section>
         </main>
     )

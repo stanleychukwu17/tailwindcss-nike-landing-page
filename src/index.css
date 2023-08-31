@@ -58,6 +58,9 @@ header {
 
 
 
+    .coGreen {
+        color: #62ecea;
+    }
     .Abs_background {
         position: absolute;
         z-index: 0;

@@ -41,7 +41,7 @@ export default function Hero() {
                 <div className="pt-12 text-lg text-[#7f8fa6] font-semibold">Our summer collection</div>
                 <header className="text-8xl font-bold py-5 leading-[1.05] tracking-normal word-spacing-2 capitalize max-lg:w-[98%] max-lg:text-[5.8rem]">
                     <p>The new arrival</p>
-                    <p><span className='text-coral-red'>Nike</span> shoes</p>
+                    <p><span className='coGreen'>Nike</span> shoes</p>
                 </header>
                 <div className="w-3/4 text-lg py-4 word-spacing-1 tracking-wide leading-relaxed max-lg:m-auto">
                     Discover stylish nike arrivals, quality comfort, and innovation for your active life
