@@ -18,7 +18,7 @@ export default {
         },
         extend: {
             fontFamily: {
-                palanquin: ['Palanquin', 'sans-serif'],
+                source3sans: ['Source Sans 3', 'sans-serif'],
                 montserrat: ['Montserrat', 'sans-serif'],
             },
             colors: {
