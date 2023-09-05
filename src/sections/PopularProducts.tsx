@@ -5,11 +5,11 @@ import {star} from '../assets/icons/index.ts'
 const thumbnailImages : {'id':number, 'src':string, ranking:number, title:string, prc:string}[] = [
     {'id':1, 'src':shoe4, ranking:4, title:'Nike Air Jordan-01', prc:'$200.20'},
     {'id':2, 'src':shoe5, ranking:4, title:'Nike Air Max Fly-01', prc:'$220.50'},
-    {'id':3, 'src':shoe6, ranking:4, title:'Nike Air Jordan triple', prc:'$240.20'},
-    {'id':3, 'src':shoe7, ranking:4, title:'Nike Air Supra Mixed', prc:'$310.20'},
+    {'id':3, 'src':shoe6, ranking:5, title:'Nike Air Jordan triple', prc:'$240.20'},
+    {'id':3, 'src':shoe7, ranking:3, title:'Nike Air Supra Mixed', prc:'$310.20'},
 ]
 
-
+// Props and Component for showing ranking
 type ArrangeRankingProps = {
     ranking: number
 }
@@ -33,6 +33,7 @@ const ArrangeRankingComp = ({ranking}: ArrangeRankingProps) => {
         </div>
     )
 }
+
 
 export default function PopularProducts() {
     return (
