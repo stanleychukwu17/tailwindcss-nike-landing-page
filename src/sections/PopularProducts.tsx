@@ -1,4 +1,5 @@
 import {shoe4, shoe5, shoe6, shoe7} from '../assets/images/index.ts'
+import {star} from '../assets/icons/index.ts'
 
 // the thumbnail images for the hero section
 const thumbnailImages : {'id':number, 'src':string, ranking:number, title:string, prc:string}[] = [
@@ -8,6 +9,31 @@ const thumbnailImages : {'id':number, 'src':string, ranking:number, title:string
     {'id':3, 'src':shoe7, ranking:4, title:'Nike Air Supra Mixed', prc:'$310.20'},
 ]
 
+
+type ArrangeRankingProps = {
+    ranking: number
+}
+const ArrangeRankingComp = ({ranking}: ArrangeRankingProps) => {
+    const tempArray: number[] = []
+
+    // fill up the array with the total ranking
+    for (let i = 0; i < ranking; i++) {
+        tempArray.push(i)
+    }
+
+    return (
+        <div className="flex space-x-2">
+            {tempArray.map(item => {
+                return (
+                    <div className="">
+                        <img src={star} alt="" />
+                    </div>
+                )
+            })}
+        </div>
+    )
+}
+
 export default function PopularProducts() {
     return (
         <section className="padding-x mt-40 my-40">
@@ -16,11 +42,13 @@ export default function PopularProducts() {
             <div className="flex justify-between">
                 {thumbnailImages.map((item) => {
                     return (
-                        <div className="">
+                        <div className="" key={item.id}>
                             <div  className="w-[320px] h-[320px] rounded-lg cursor-pointer" key={item.id}>
                                 <img className='w-full h-full object-contain' src={item.src} alt="" />
                             </div>
-                            <div className="">ranking</div>
+                            <div className="">
+                                <ArrangeRankingComp ranking={item.ranking} />
+                            </div>
                             <div className="pt-2 text-xl font-bold tracking-wide">{item.title}</div>
                             <div className="pt-2 text-lg text-[#f23a83] font-semibold">{item.prc}</div>
                         </div>
