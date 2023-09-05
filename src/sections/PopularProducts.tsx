@@ -38,12 +38,12 @@ const ArrangeRankingComp = ({ranking}: ArrangeRankingProps) => {
 export default function PopularProducts() {
     return (
         <section className="padding-x mt-40 my-40">
-            <div className="text-4xl font-semibold">Our <span className="coGreen"> Popular </span>Products</div>
-            <div className="py-6 w-[600px] text-lg leading-relaxed">Experience top-notch quality and style with our sought-after selections. Discover a world of comfort, design, and value</div>
-            <div className="flex justify-between">
+            <div className="text-4xl font-semibold max-lg:text-center">Our <span className="coGreen"> Popular </span>Products</div>
+            <div className="py-6 w-[600px] text-lg leading-relaxed max-lg:w-4/5 max-lg:text-center max-lg:m-auto">Experience top-notch quality and style with our sought-after selections. Discover a world of comfort, design, and value</div>
+            <div className="flex justify-between flex-wrap max-lg:justify-evenly">
                 {thumbnailImages.map((item) => {
                     return (
-                        <div className="" key={item.prc}>
+                        <div className="max-lg:my-6" key={item.prc}>
                             <div  className="w-[320px] h-[320px] rounded-lg cursor-pointer" key={item.id}>
                                 <img className='w-full h-full object-contain' src={item.src} alt="" />
                             </div>
