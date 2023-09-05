@@ -25,7 +25,7 @@ const ArrangeRankingComp = ({ranking}: ArrangeRankingProps) => {
         <div className="flex space-x-2">
             {tempArray.map(item => {
                 return (
-                    <div className="">
+                    <div className="" key={item}>
                         <img src={star} alt="" />
                     </div>
                 )
@@ -42,15 +42,15 @@ export default function PopularProducts() {
             <div className="flex justify-between">
                 {thumbnailImages.map((item) => {
                     return (
-                        <div className="" key={item.id}>
+                        <div className="" key={item.prc}>
                             <div  className="w-[320px] h-[320px] rounded-lg cursor-pointer" key={item.id}>
                                 <img className='w-full h-full object-contain' src={item.src} alt="" />
                             </div>
-                            <div className="">
+                            <div className="pt-5">
                                 <ArrangeRankingComp ranking={item.ranking} />
                             </div>
-                            <div className="pt-2 text-xl font-bold tracking-wide">{item.title}</div>
-                            <div className="pt-2 text-lg text-[#f23a83] font-semibold">{item.prc}</div>
+                            <div className="pt-4 text-xl font-bold tracking-wide">{item.title}</div>
+                            <div className="pt-3 text-lg text-[#f23a83] font-semibold">{item.prc}</div>
                         </div>
                     )
                 })}
