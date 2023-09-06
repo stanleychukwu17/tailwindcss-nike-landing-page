@@ -4,6 +4,7 @@ import Nav from './sections/Nav'
 import PopularProducts from './sections/PopularProducts'
 import Services from './sections/Services'
 import SuperQuality from './sections/SuperQuality'
+import SpecialOffer from './sections/SpecialOffer'
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <PopularProducts />
                 <SuperQuality />
                 <Services />
+                <SpecialOffer />
             </section>
         </main>
     )
