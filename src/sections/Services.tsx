@@ -1,6 +1,5 @@
 import {truckFast, shieldTick, support} from '../assets/icons/index.ts'
 
-
 const whatIDo: {icon:string, title:string, content:string}[] = [
     {
         icon: truckFast,
@@ -18,16 +17,15 @@ const whatIDo: {icon:string, title:string, content:string}[] = [
         content: 'Our dedicated team is here to assist you every step of the way.'
     },
 ]
-console.log(whatIDo)
 
 export default function Services() {
     return (
-        <section className="flex justify-evenly mb-40 px-5">
+        <section className="w-full flex justify-between px-5 mb-28 max-xl:px-2 max-lg:flex-wrap max-lg:text-center">
             {whatIDo.map(item => {
                 return (
-                    <div className="px-10">
-                        <div className="w-80">
-                            <img className='w-16' src={item.icon} alt="" />
+                    <div className="px-10 max-xl:w-[350px] max-lg:mb-16 max-lg:w-full">
+                        <div className="">
+                            <img className='w-16 max-lg:m-auto' src={item.icon} alt="" />
                         </div>
                         <div className="text-2xl font-semibold py-5">{item.title}</div>
                         <div className="text-lg leading-relaxed">{item.content}</div>
