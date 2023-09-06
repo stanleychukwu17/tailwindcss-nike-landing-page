@@ -19,7 +19,7 @@ export default function SuperQuality() {
             <div className="w-2/4 max-lg:w-full">
                 <img className='rounded-lg' src={shoe8} alt="" />
             </div>
-            <div className="max-lg:block text-center mt-10">
+            <div className="hidden max-lg:block text-center mt-10">
                 <Button />
             </div>
         </section>

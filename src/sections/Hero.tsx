@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import chevron_right from '../assets/icons/chevron-right.svg'
 import {bigShoe1, bigShoe2, bigShoe3} from '../assets/images/index.ts'
+import Button from '../components/Button.tsx'
 
 // carries the information for stats of the product
 const statShow: {stat:string, info:string}[] = [
@@ -47,10 +48,7 @@ export default function Hero() {
                     Discover stylish nike arrivals, quality comfort, and innovation for your active life
                 </div>
                 <div className="py-4">
-                    <button className="bg-coral-red py-3 px-6 rounded-full font-semibold">
-                        Shop now
-                        <img className='inline w-6 ml-3' src={chevron_right} alt=" right arrow" />
-                    </button>
+                    <Button />
                 </div>
                 <div className="flex justify-between w-8/12 pt-2 max-lg:w-[95%]">
                     {statShow.map((item) => {
