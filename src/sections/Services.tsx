@@ -22,15 +22,15 @@ console.log(whatIDo)
 
 export default function Services() {
     return (
-        <section className="flex justify-evenly mb-40">
+        <section className="flex justify-evenly mb-40 px-5">
             {whatIDo.map(item => {
                 return (
-                    <div className="">
+                    <div className="px-10">
                         <div className="w-80">
-                            <img className='w-20' src={item.icon} alt="" />
+                            <img className='w-16' src={item.icon} alt="" />
                         </div>
-                        <div className="">{item.title}</div>
-                        <div className="">{item.content}</div>
+                        <div className="text-2xl font-semibold py-5">{item.title}</div>
+                        <div className="text-lg leading-relaxed">{item.content}</div>
                     </div>
                 )
             })}
