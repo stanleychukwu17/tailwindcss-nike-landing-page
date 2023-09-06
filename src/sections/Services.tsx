@@ -26,8 +26,8 @@ export default function Services() {
             {whatIDo.map(item => {
                 return (
                     <div className="">
-                        <div className="w-80 bg-black">
-                            <img src={item.icon} alt="" />
+                        <div className="w-80">
+                            <img className='w-20' src={item.icon} alt="" />
                         </div>
                         <div className="">{item.title}</div>
                         <div className="">{item.content}</div>
