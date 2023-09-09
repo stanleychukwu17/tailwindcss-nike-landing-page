@@ -10,12 +10,12 @@ type SideType = typeof side1;
 
 const side2: SideType = {
     title: 'Help',
-    links: ['Air Force 1', 'Air Max 1', 'Air Jordan 1', 'Air Force 2', 'Nike Waffle Racer', 'Nike Corteva']
+    links: ['About us', 'FAQs', 'How it works', 'Privacy policy', 'Payment policy']
 }
 
 const side3: SideType = {
     title: 'Get in touch',
-    links: ['Air Force 1', 'Air Max 1', 'Air Jordan 1', 'Air Force 2', 'Nike Waffle Racer', 'Nike Corteva']
+    links: ['Customer@nike.com', '+44 205 578 102 655']
 }
 
 
@@ -32,7 +32,7 @@ const H1Comp = ({info} : H1CompProps) => {
             <div className="mt-5">
                 {info.links.map(item => {
                     return (
-                        <div className="my-3">{item}</div>
+                        <div className="my-3 cursor-pointer text-white-400 hover:text-slate-gray">{item}</div>
                     )
                 })}
             </div>
@@ -65,8 +65,9 @@ export default function Footer() {
                     <H1Comp info={side3} />
                 </div>
             </div>
-            <div className="">
-
+            <div className="flex justify-between pr-10">
+                <div className="cursor-pointer text-white-400 hover:text-slate-gray">Copyright. All rights reserved.</div>
+                <div className="cursor-pointer text-white-400 hover:text-slate-gray">Terms & Conditions</div>
             </div>
         </footer>
     )
