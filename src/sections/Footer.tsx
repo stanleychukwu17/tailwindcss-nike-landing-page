@@ -43,8 +43,8 @@ const H1Comp = ({info} : H1CompProps) => {
 export default function Footer() {
     return (
         <footer className='bg-black text-white padding-x py-12'>
-            <div className="flex justify-between">
-                <div className="w-[400px]">
+            <div className="flex justify-between max-md:flex-wrap">
+                <div className="w-[400px] mr-5 max-md:min-w-full">
                     <div className="">
                         <img className='w-40' src={footerLogo} alt="" />
                     </div>
@@ -55,13 +55,14 @@ export default function Footer() {
                         <div className="bg-white p-3 rounded-full"><img src={instagram} alt="" /></div>
                     </div>
                 </div>
-                <div className="">
+
+                <div className="max-lg:min-w-[140px] max-lg:my-8 max-md:min-w-[200px]">
                     <H1Comp info={side1} />
                 </div>
-                <div className="">
+                <div className="max-lg:min-w-[140px] max-lg:my-8 max-md:min-w-[200px]">
                     <H1Comp info={side2} />
                 </div>
-                <div className="mr-28">
+                <div className="mr-28 max-xl:mr-0 max-lg:min-w-[140px] max-lg:my-8 max-md:min-w-[200px]">
                     <H1Comp info={side3} />
                 </div>
             </div>

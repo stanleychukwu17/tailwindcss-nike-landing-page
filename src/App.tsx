@@ -6,6 +6,7 @@ import Services from './sections/Services'
 import SuperQuality from './sections/SuperQuality'
 import SpecialOffer from './sections/SpecialOffer'
 import Footer from './sections/Footer'
+import Subscribe from './sections/Subscribe'
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <SuperQuality />
                 <Services />
                 <SpecialOffer />
+                <Subscribe />
                 <Footer />
             </section>
         </main>
